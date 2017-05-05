@@ -1,0 +1,18 @@
+
+
+@mixin gradients ($left, $right){
+	background: $left;
+	background: -moz-linear-gradient(left, $left 0%, $right 100%); 
+	background: -webkit-linear-gradient(left, $left 0%,$right 100%);
+	background: linear-gradient(to right, $left 0%,$right 100%); 
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$left', endColorstr='$right',GradientType=1 );
+}
+
+@mixin font-courier($size: false, $colour: $font-main, $weight: false,  $lh: 1em) {
+    font-family: 'Courier New', Courier, monospace, Helvetica, Arial, sans-serif;
+    @if $size { font-size: $size; }
+    @if $colour { color: $colour; }
+    @if $weight { font-weight: $weight; }
+    @if $lh { line-height: $lh; }
+}
+

@@ -1,0 +1,52 @@
+span.blinking-cursor {
+  font-weight: 100;
+  -webkit-animation: 1s blink step-end infinite;
+  -moz-animation: 1s blink step-end infinite;
+  -ms-animation: 1s blink step-end infinite;
+  -o-animation: 1s blink step-end infinite;
+  animation: 1s blink step-end infinite; }
+
+@keyframes "blink" {
+  from, to {
+    color: transparent; }
+  50% {
+    color: #ffffff; } }
+@-moz-keyframes blink {
+  from, to {
+    color: transparent; }
+  50% {
+    color: #ffffff; } }
+@-webkit-keyframes "blink" {
+  from, to {
+    color: transparent; }
+  50% {
+    color: #ffffff; } }
+@-ms-keyframes "blink" {
+  from, to {
+    color: transparent; }
+  50% {
+    color: #ffffff; } }
+@-o-keyframes "blink" {
+  from, to {
+    color: transparent; }
+  50% {
+    color: #ffffff; } }
+* {
+  font-family: 'Courier New', Courier, monospace, Helvetica, Arial, sans-serif;
+  color: #ffffff;
+  line-height: 1em; }
+
+body {
+  background: #361360;
+  background: -moz-linear-gradient(left, #361360 0%, #543e51 100%);
+  background: -webkit-linear-gradient(left, #361360 0%, #543e51 100%);
+  background: linear-gradient(to right, #361360 0%, #543e51 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$left', endColorstr='$right',GradientType=1 ); }
+
+ul li {
+  list-style: none; }
+
+.highlight {
+  color: #00ff80; }
+
+/*# sourceMappingURL=styles.css.map */

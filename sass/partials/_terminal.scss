@@ -1,0 +1,19 @@
+@import 'partials/mixins.scss';
+@import 'blink.scss';
+
+* {
+	@include font-courier;
+}
+
+body{
+	@include gradients($body-bg-gradient-left, $body-bg-gradient-right);	
+
+}
+
+ul li {
+	list-style: none;
+}
+
+.highlight{
+	color:$highlight;
+}
