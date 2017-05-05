@@ -7,7 +7,43 @@
 
 body{
 	@include gradients($body-bg-gradient-left, $body-bg-gradient-right);	
+	padding: 25px 50px;
+}
 
+.main{
+	border:1px solid black;
+	box-shadow: 0px 0px 4px 10px rgba(255,255,255,0.1);
+	border-radius:5px;
+	background:rgba(0,0,0,.3);
+	min-height:80vh;
+	.bar{
+		height:20px;
+		padding:3px;
+		background:$title;
+		border-radius:5px 5px 0 0;
+		button {
+			outline:0;
+			padding:2px;
+			font-size:0.5em;
+			border:0;
+			height:15px;
+			width:15px;
+			border-radius: 10px;
+			background: black; 
+			margin-right:3px;
+				&:hover{
+					background: $highlight;
+					color:black;
+				}
+				&:active{
+					box-shadow:2px 2px 0px inset;
+					background: $highlight;
+					color:black;
+				}
+				
+
+			}
+	}
 }
 
 ul li {
@@ -16,4 +52,7 @@ ul li {
 
 .highlight{
 	color:$highlight;
+}
+.title{
+	color:$title;
 }

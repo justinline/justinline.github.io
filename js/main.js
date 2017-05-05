@@ -6,14 +6,20 @@ function checkCommand(command) {
 	if (command == 'help'){
 		terminal.innerHTML += `
 		<li class="line">
-			<hr>
+		<br/>
 		</li>		
 		<li class="line">
-			~* TERMINAL HELP *~
+			<span class="title">~* TERMINAL HELP *~</span>
 			<br/><br/>
-			<span class="highlight">cv</span> [Prints current CV to screen]
+			<span class="highlight">cv</span> <br/>
+			<small>--> [Prints current CV to screen]</small>
 			<br/><br/>
-			<span class="highlight">contact</span> [Prints current Contact details to screen]
+			<span class="highlight">contact</span> <br/> 
+			<small>--> [Prints current Contact details to screen]</small>
+			<br/><br/>
+			<span class="highlight">clear</span> <br/>
+			<small>--> Clears Terminal</small>
+			<br/><br/>
 		</li>
 		<li class="line">
 			<br/>
@@ -22,19 +28,23 @@ function checkCommand(command) {
 	} else if (command == 'cv'){
 		terminal.innerHTML += `
 		<li class="line">
-			<hr>
+			<br/>
 		</li>		
 		<li class="line">
-			<span class="highlight">~* JUSTIN FOCUS'S TERMINAL CV *~</span>:
+			<span class="title">~* JUSTIN FOCUS'S TERMINAL CV *~</span>:
 			<br/><br/>
 			<span class="highlight">Education</span><br/>
-			University of the West of England [Fashion & Communication] BA (Hons)<br/><br/>
-			King Edwards VI College, Stourbridge [Human Biology, Chemistry, Computing, Psychology] A-Levels
+			University of the West of England <br/>
+			<small>--> BA (Hons) [Fashion & Communication] </small><br/><br/>
+			King Edwards VI College, Stourbridge <br/>
+			<small>--> A-Levels [Human Biology, Chemistry, Computing, Psychology] </small>
 			<br/><br/>
 			<span class="highlight">Employment</span><br/>
-			StudioXAG [Senior Technical Designer]<br/><br/>
+			StudioXAG [Senior Technical Designer]<br/>
+			<small>--> CAD Drawings and Problem solving for spatial and retail design and manufacture. Managing Junior Designers. IT Support.</small><br/><br/>
 			Elemental Design [Technical Designer]<br/><br/>
-			TRO for Google [Chromebook Specialist]<br/><br/>
+			TRO for Google [Chromebook Specialist]<br/>
+			<small>--> Educating Retailers and consumers about the benefits of ChromeOS and Android.</small><br/><br/>
 		</li>
 		<li class="line">
 			<br/>
@@ -43,10 +53,10 @@ function checkCommand(command) {
 	} else if (command == 'contact'){
 		terminal.innerHTML += `
 		<li class="line">
-			<hr>
+			<br/>
 		</li>		
 		<li class="line">
-			<span class="highlight">~* CONTACT ME *~</span>:
+			<span class="title">~* CONTACT ME *~</span>:
 			<br/><br/>
 			<span class="highlight">Email:</span><br/>
 			<a href="mailto:iamjustinfocus@gmail.com">iamjustinfocus@gmail.com</a>
@@ -58,9 +68,25 @@ function checkCommand(command) {
 			<br/>
 		</li>
 		`;
+	} else if (command == 'clear'){
+		clear();
+		return;
 	}
+	terminal.innerHTML += `
+		<li class="active">${htmlStart}<span class="write"></span><span class="blinking-cursor">_</span></li>`;
+
 }
 
+function clear(){
+	terminal.innerHTML = `
+		<li class="line">JUSTINLINE | CV</li>
+		<li class="line">loading environment...</li>
+		<li class="line">JLN bash, version 1.0.0(1)-release (x86_64-pc-linux-gnu)</li>			
+		<li class="line">type 'help' for further information</li>			
+		<li class="active"><span class="highlight">guest@justinline:~$</span> <span class="write"></span><span class="blinking-cursor">_</span></li>
+		`;
+	return;
+}
 
 function typeLetter(e) {
 	let active = document.querySelector('.active');
@@ -75,9 +101,7 @@ function typeLetter(e) {
 		`;
 		active.className = 'line';
 		checkCommand(writeArea.innerText);
-		terminal.innerHTML += `
-		<li class="active">${htmlStart}<span class="write"></span><span class="blinking-cursor">_</span></li>`;
-
+		
 	} else {
 		return 1;
 	}
