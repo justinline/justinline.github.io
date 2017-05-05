@@ -1,6 +1,6 @@
 const terminal = document.querySelector('.terminal');
 const htmlStart = '<span class="highlight">guest@justinline:~$ </span>';
-
+const inpFocus = document.querySelector('input');
 
 function checkCommand(command) {
 	if (command == 'help'){
@@ -110,6 +110,9 @@ function typeLetter(e) {
 
 }
 
-
+function focusKey(){
+	inpFocus.focus();
+}
 
 window.addEventListener('keydown', typeLetter);
+window.addEventListener('click', focusKey);
