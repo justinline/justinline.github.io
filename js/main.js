@@ -28,10 +28,13 @@ function checkCommand(command) {
 			<span class="highlight">~* JUSTIN FOCUS'S TERMINAL CV *~</span>:
 			<br/><br/>
 			<span class="highlight">Education</span><br/>
-			University of the West of England [Fashion & Communication] BA (Hons)
+			University of the West of England [Fashion & Communication] BA (Hons)<br/><br/>
+			King Edwards VI College, Stourbridge [Human Biology, Chemistry, Computing, Psychology] A-Levels
 			<br/><br/>
 			<span class="highlight">Employment</span><br/>
-			StudioXAG [Technical Designer]
+			StudioXAG [Senior Technical Designer]<br/><br/>
+			Elemental Design [Technical Designer]<br/><br/>
+			TRO for Google [Chromebook Specialist]<br/><br/>
 		</li>
 		<li class="line">
 			<br/>
