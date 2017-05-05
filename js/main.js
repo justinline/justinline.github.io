@@ -89,6 +89,7 @@ function clear(){
 }
 
 function typeLetter(e) {
+	console.log(e.key);
 	let active = document.querySelector('.active');
 	let writeArea = document.querySelector('.write');
 	if (event.key.length === 1 && (e.key <= 'z' && e.key >= 'a') || e.key === ' ') {

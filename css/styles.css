@@ -86,4 +86,9 @@ ul li {
 .title {
   color: #00ff80; }
 
+input {
+  background: 0;
+  border: 0;
+  display: none; }
+
 /*# sourceMappingURL=styles.css.map */
