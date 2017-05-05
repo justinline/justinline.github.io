@@ -102,7 +102,7 @@ function typeLetter(e) {
 		`;
 		active.className = 'line';
 		checkCommand(writeArea.innerText);
-		
+		window.scrollTo(0,document.body.scrollHeight);
 	} else {
 		return 1;
 	}
