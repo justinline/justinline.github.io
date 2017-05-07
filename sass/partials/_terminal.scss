@@ -7,7 +7,7 @@
 
 body{
 	@include gradients($body-bg-gradient-left, $body-bg-gradient-right);	
-	padding: 25px 50px;
+	padding: 25px 30px;
 }
 
 .main{
@@ -15,6 +15,11 @@ body{
 	border-radius:5px 5px 0 0;
 	background:rgba(0,0,0,.3);
 	min-height:80vh;
+	box-shadow: 2px 2px 1px 1px rgba(0,0,0,.5);
+	.terminal{
+		padding:1%;
+		margin:0;
+	}
 	.bar{
 		height:20px;
 		padding:3px;
@@ -60,6 +65,10 @@ ul li {
 }
 .title{
 	color:$title;
+}
+
+a {
+	color:$link;
 }
 
 input{

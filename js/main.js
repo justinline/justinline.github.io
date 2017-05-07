@@ -9,7 +9,7 @@ function checkCommand(command) {
 		<br/>
 		</li>		
 		<li class="line">
-			<span class="title">~* TERMINAL HELP *~</span>
+			<span class="title">~* TERMINAL COMMANDS *~</span>
 			<br/><br/>
 			<span class="highlight">cv</span> <br/>
 			<small>--> Prints current CV to screen</small>
@@ -17,9 +17,33 @@ function checkCommand(command) {
 			<span class="highlight">contact</span> <br/> 
 			<small>--> Prints current Contact details to screen</small>
 			<br/><br/>
+			<span class="highlight">skills</span> <br/>
+			<small>--> Prints Skills and Knowledge</small>
+			<br/><br/>
 			<span class="highlight">clear</span> <br/>
 			<small>--> Clears Terminal</small>
 			<br/><br/>
+		</li>
+		<li class="line">
+			<br/>
+		</li>
+		`;
+	} else if (command == 'skills'){
+		terminal.innerHTML += `
+		<li class="line">
+			<br/>
+		</li>		
+		<li class="line">
+			<span class="title">~* SKILLS AND KNOWLEDGE *~</span>:
+			<br/><br/>
+			<span class="highlight">Languages</span><br/>
+			Python, Javascript, HTML, CSS <br/>
+			<small>Frameworks: Django, DjangoREST, React, Angular, Bootstrap </small><br/><br/>
+			<span class="highlight">Utilities</span><br/>
+			Preprocessors (SASS), Git, Terminal, Linux, BASH<br/><br/>
+			<span class="highlight">Data</span><br/>
+			mySQL, postreSQL, sqlite, JSON<br/>
+
 		</li>
 		<li class="line">
 			<br/>
@@ -33,6 +57,7 @@ function checkCommand(command) {
 		<li class="line">
 			<span class="title">~* JUSTIN FOCUS'S TERMINAL CV *~</span>:
 			<br/><br/>
+			<a href="../assets/justinline-cv.pdf" download>DOWNLOAD PDF HERE</a><br/><br/>
 			<span class="highlight">Education</span><br/>
 			University of the West of England <br/>
 			<small>--> BA (Hons) [Fashion & Communication] </small><br/><br/>
@@ -77,7 +102,7 @@ function checkCommand(command) {
 
 }
 
-function clear(){
+function init(){
 	terminal.innerHTML = `
 		<li class="line">JUSTINLINE | CV</li>
 		<li class="line">loading environment...</li>
@@ -88,8 +113,15 @@ function clear(){
 	return;
 }
 
+function clear(){
+	terminal.innerHTML = `
+		<li class="active"><span class="highlight">guest@justinline:~$</span> <span class="write"></span><span class="blinking-cursor">_</span></li>
+		`;
+	return;
+}
+
 function typeLetter(e) {
-	console.log(e.key);
+	// console.log(e.key);
 	let active = document.querySelector('.active');
 	let writeArea = document.querySelector('.write');
 	// if (event.key.length === 1 && (e.key <= 'z' && e.key >= 'a') || e.key === ' ') {
@@ -118,5 +150,6 @@ function focusKey(){
 	inpFocus.focus();
 }
 
+init();
 window.addEventListener('keyup', typeLetter);
 window.addEventListener('click', focusKey);
