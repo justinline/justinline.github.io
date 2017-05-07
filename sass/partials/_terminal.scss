@@ -19,6 +19,13 @@ body{
 	.terminal{
 		padding:1%;
 		margin:0;
+		font-size:12px;
+		li img{
+			height:90px;
+			width:90px;
+			border:2px solid $title;
+			border-radius:45px;
+		}
 	}
 	.bar{
 		height:20px;
