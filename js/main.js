@@ -143,6 +143,7 @@ function init(){
 		<li class="line">JUSTINLINE | CV</li>
 		<li class="line">loading environment...</li>
 		<li class="line">JLN bash, version 1.0.0(1)-release (x86_64-pc-linux-gnu)</li>			
+		<li class="line"><span class="warning">May not function correctly on smartphones.</span></li>
 		<li class="line">type 'help' for further information</li>			
 		<li class="active"><span class="highlight">guest@justinline:~$</span> <span class="write"></span><span class="blinking-cursor">_</span></li>
 		`;
