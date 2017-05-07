@@ -97,11 +97,12 @@ function typeLetter(e) {
 	// } else if (event.key.length === 1 && (e.key <= 'Z' && e.key >= 'A')) {
 	// 	writeArea.innerHTML += String.fromCharCode(e.key.charCodeAt(0) + 32);
 	if(e.key === 'Enter'){
+		inpFocus.value = '';
+		inpFocus.placeholder = '';
 		active.innerHTML = `
 		${htmlStart}${writeArea.innerText}
 		`;
 		active.className = 'line';
-		inpFocus.value = '';
 		checkCommand(writeArea.innerText);
 		window.scrollTo(0,document.body.scrollHeight);
 	} else {
