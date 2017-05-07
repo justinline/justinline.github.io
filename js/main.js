@@ -12,10 +12,10 @@ function checkCommand(command) {
 			<span class="title">~* TERMINAL HELP *~</span>
 			<br/><br/>
 			<span class="highlight">cv</span> <br/>
-			<small>--> [Prints current CV to screen]</small>
+			<small>--> Prints current CV to screen</small>
 			<br/><br/>
 			<span class="highlight">contact</span> <br/> 
-			<small>--> [Prints current Contact details to screen]</small>
+			<small>--> Prints current Contact details to screen</small>
 			<br/><br/>
 			<span class="highlight">clear</span> <br/>
 			<small>--> Clears Terminal</small>
@@ -92,19 +92,22 @@ function typeLetter(e) {
 	console.log(e.key);
 	let active = document.querySelector('.active');
 	let writeArea = document.querySelector('.write');
-	if (event.key.length === 1 && (e.key <= 'z' && e.key >= 'a') || e.key === ' ') {
-		writeArea.innerHTML += e.key;
-	} else if (event.key.length === 1 && (e.key <= 'Z' && e.key >= 'A')) {
-		writeArea.innerHTML += String.fromCharCode(e.key.charCodeAt(0) + 32);
-	} else if(e.key === 'Enter'){
+	// if (event.key.length === 1 && (e.key <= 'z' && e.key >= 'a') || e.key === ' ') {
+	// 	inpFocus.value += e.key;
+	// } else if (event.key.length === 1 && (e.key <= 'Z' && e.key >= 'A')) {
+	// 	writeArea.innerHTML += String.fromCharCode(e.key.charCodeAt(0) + 32);
+	if(e.key === 'Enter'){
 		active.innerHTML = `
 		${htmlStart}${writeArea.innerText}
 		`;
 		active.className = 'line';
+		inpFocus.value = '';
 		checkCommand(writeArea.innerText);
 		window.scrollTo(0,document.body.scrollHeight);
 	} else {
-		return 1;
+		writeArea.innerHTML = inpFocus.value.toLowerCase();
+		focusKey();
+		
 	}
 
 
@@ -114,5 +117,5 @@ function focusKey(){
 	inpFocus.focus();
 }
 
-window.addEventListener('keydown', typeLetter);
+window.addEventListener('keyup', typeLetter);
 window.addEventListener('click', focusKey);
