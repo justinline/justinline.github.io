@@ -1,3 +1,4 @@
+const mainWindow = document.querySelector('.main');
 const terminal = document.querySelector('.terminal');
 const htmlStart = '<span class="highlight">guest@justinline:~$ </span>';
 const inpFocus = document.querySelector('input');
@@ -14,8 +15,8 @@ function checkCommand(command) {
 			<span class="highlight">justin</span> <br/>
 			<small>--> Prints Personal Details</small>
 			<br/><br/>
-			<span class="highlight">cv</span> <br/>
-			<small>--> Prints current CV to screen</small>
+			<span class="highlight">employment</span> <br/>
+			<small>--> Prints employment and education to screen</small>
 			<br/><br/>
 			<span class="highlight">contact</span> <br/> 
 			<small>--> Prints current Contact details to screen</small>
@@ -85,7 +86,7 @@ people using whatever it is I have built.</small>
 			<br/>
 		</li>
 		`;
-	} else if (command == 'cv'){
+	} else if (command == 'employment'){
 		terminal.innerHTML += `
 		<li class="line">
 			<br/>
@@ -130,7 +131,9 @@ people using whatever it is I have built.</small>
 		</li>
 		`;
 	} else if (command == 'clear'){
+		mainWindow.style.animationPlayState = 'running';
 		clear();
+		setTimeout(function(){mainWindow.style.animationPlayState = 'paused';}, 200);
 		return;
 	}
 	terminal.innerHTML += `

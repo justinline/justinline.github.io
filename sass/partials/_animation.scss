@@ -99,7 +99,8 @@
     transform: translate(-0.5px, -1.5px) rotate(0.5deg); }
   0%, 100% {
     transform: translate(0, 0) rotate(0); } }
-@keyframes shake-vertical {
+
+	@keyframes shake-vertical {
   2% {
     transform: translate(0, 0px) rotate(0); }
   4% {
@@ -200,6 +201,8 @@
     transform: translate(0, -6px) rotate(0); }
   0%, 100% {
     transform: translate(0, 0) rotate(0); } }
+
+
 @keyframes shake-horizontal {
   2% {
     transform: translate(-4px, 0) rotate(0); }
@@ -301,119 +304,3 @@
     transform: translate(-4px, 0) rotate(0); }
   0%, 100% {
     transform: translate(0, 0) rotate(0); } }
-span.blinking-cursor {
-  font-weight: 100;
-  -webkit-animation: 1s blink step-end infinite;
-  -moz-animation: 1s blink step-end infinite;
-  -ms-animation: 1s blink step-end infinite;
-  -o-animation: 1s blink step-end infinite;
-  animation: 1s blink step-end infinite; }
-
-@keyframes "blink" {
-  from, to {
-    color: transparent; }
-  50% {
-    color: #ffffff; } }
-@-moz-keyframes blink {
-  from, to {
-    color: transparent; }
-  50% {
-    color: #ffffff; } }
-@-webkit-keyframes "blink" {
-  from, to {
-    color: transparent; }
-  50% {
-    color: #ffffff; } }
-@-ms-keyframes "blink" {
-  from, to {
-    color: transparent; }
-  50% {
-    color: #ffffff; } }
-@-o-keyframes "blink" {
-  from, to {
-    color: transparent; }
-  50% {
-    color: #ffffff; } }
-* {
-  font-family: 'Courier New', Courier, monospace, Helvetica, Arial, sans-serif;
-  color: #ffffff;
-  line-height: 1em; }
-
-body {
-  background: #361360;
-  background: -moz-linear-gradient(-90deg, #361360 0%, #831675 100%);
-  background: -webkit-linear-gradient(-90deg, #361360 0%, #831675 100%);
-  background: linear-gradient(-90deg, #361360 0%, #831675 100%);
-  background-size: cover;
-  padding: 25px 30px; }
-
-.main {
-  border: 1px solid black;
-  border-radius: 5px 5px 0 0;
-  background: rgba(0, 0, 0, 0.3);
-  min-height: 80vh;
-  box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, 0.5);
-  animation-name: shake-horizontal;
-  animation-duration: 200ms;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-  animation-play-state: paused; }
-  .main .terminal {
-    padding: 1%;
-    margin: 0;
-    font-size: 12px; }
-    .main .terminal li img {
-      height: 90px;
-      width: 90px;
-      border: 2px solid #0fa;
-      border-radius: 45px; }
-  .main .bar {
-    height: 20px;
-    padding: 3px;
-    background: #0fa;
-    border-radius: 5px 5px 0 0; }
-    .main .bar button {
-      display: inline;
-      outline: 0;
-      padding: 2px;
-      font-size: 0.5em;
-      border: 0;
-      height: 15px;
-      width: 15px;
-      border-radius: 10px;
-      background: black;
-      margin-right: 3px; }
-      .main .bar button:hover {
-        background: #64b4ff;
-        color: black; }
-      .main .bar button:active {
-        box-shadow: 2px 2px 0px inset;
-        background: #64b4ff;
-        color: black; }
-    .main .bar h6 {
-      display: inline;
-      padding: 7px;
-      color: black; }
-
-ul li {
-  list-style: none; }
-
-.highlight {
-  color: #64b4ff; }
-
-.title {
-  color: #0fa; }
-
-.warning {
-  color: #ff5e00; }
-
-a {
-  color: #ffb800; }
-
-input {
-  background: 0;
-  border: 0;
-  outline: 0;
-  width: 0; }
-
-/*# sourceMappingURL=styles.css.map */
